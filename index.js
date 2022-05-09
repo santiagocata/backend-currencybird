@@ -22,6 +22,6 @@ app.use("/", routes);
 
 const PORT = process.env.PORT || 3001;
 
-db.sync({ force: false }).then(() => {
+db.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Server listening ON ${PORT}`));
 });
